@@ -2,8 +2,8 @@
 
 exports[`mount component 1`] = `
 "<div class=\\"row\\">
-  <div class=\\"column col-3 q-mx-auto q-mt-lg\\"><span class=\\"text-center text-subtitle2 q-my-sm\\"> Count: <span data-id=\\"counter\\">0</span></span><button class=\\"q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle q-btn--actionable q-focusable q-hoverable\\" tabindex=\\"0\\" type=\\"button\\" data-id=\\"add\\"><span class=\\"q-focus-helper\\"></span><span class=\\"q-btn__content text-center col items-center q-anchor--skip justify-center row\\">+</span></button>
-    <p>Hello testing</p>
+  <div class=\\"column col-3 q-mx-auto q-mt-lg\\">
+    <h2>Hello to the parking app </h2>
   </div>
 </div>"
 `;
