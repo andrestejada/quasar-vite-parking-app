@@ -30,10 +30,6 @@ test('mount component', () => {
   expect(CounterPage).toBeTruthy()
   
   const wrapper = wrapperFactory()
-  console.log(wrapper.html())
-  const count = wrapper.get('[data-id="counter"]')
-
-  expect(count.text()).toContain('0')
   expect(wrapper.html()).toMatchSnapshot()
 })
 
