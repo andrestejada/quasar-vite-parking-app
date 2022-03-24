@@ -24,14 +24,23 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+
+
+import { computed, onMounted, onUnmounted } from "vue";
 import useVehicleStore, { Vehicle } from "../stores/vehiclesStore";
 import { calculateHours } from "../utils/calculateHours";
 import { calculateRate } from "../utils/calculateRate";
 import { formatMoney } from '../utils/formatMoney';
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
+console.log('created')
+onMounted(()=>{
+  console.log('mounted')
+})
 
+onUnmounted(()=>{
+  console.log('unmounted')
+})
 const isOpen = computed(() => props.isOpen);
 const store = useVehicleStore();
 
@@ -60,5 +69,6 @@ interface Props {
 interface Emits {
   (e: "close", value: boolean): void;
 }
+
 </script>
 <style lang="scss" scoped></style>

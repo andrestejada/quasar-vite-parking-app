@@ -1,13 +1,6 @@
 {
   "parkedVehicles": [
     {
-      "id": 3,
-      "vehicleType": "Bike",
-      "vehiclePlate": "NOL38F",
-      "spotToFill": 7,
-      "dateOfEntrance": "2022-03-04T14:06:17.146Z"
-    },
-    {
       "id": 4,
       "vehicleType": "Car",
       "vehiclePlate": "MIK381",
