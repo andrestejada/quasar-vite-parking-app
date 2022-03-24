@@ -15,14 +15,11 @@
       "dateOfEntrance": "2022-03-04T13:06:17.146Z"
     },
     {
-      "email": "andres@correo.com",
-      "password": "123456",
+      "vehicleType": "Car",
+      "vehiclePlate": "MIK382",
+      "spotToFill": 9,
+      "dateOfEntrance": "2022-03-22T13:06:17.146Z",
       "id": 5
-    },
-    {
-      "email": "andres@correo.com",
-      "password": "123456",
-      "id": 6
     }
   ]
 }
