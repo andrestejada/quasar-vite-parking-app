@@ -1,13 +1,6 @@
 {
   "parkedVehicles": [
     {
-      "id": 3,
-      "vehicleType": "Bike",
-      "vehiclePlate": "NOL38F",
-      "spotToFill": 7,
-      "dateOfEntrance": "2022-03-04T14:06:17.146Z"
-    },
-    {
       "id": 4,
       "vehicleType": "Car",
       "vehiclePlate": "MIK381",
@@ -15,14 +8,29 @@
       "dateOfEntrance": "2022-03-04T13:06:17.146Z"
     },
     {
-      "email": "andres@correo.com",
-      "password": "123456",
+      "vehicleType": "Car",
+      "vehiclePlate": "MIK382",
+      "spotToFill": 9,
+      "dateOfEntrance": "2022-03-22T13:06:17.146Z",
       "id": 5
     },
     {
-      "email": "andres@correo.com",
-      "password": "123456",
+      "vehiclePlate": "NOL38F",
+      "vehicleType": "Bike",
+      "dateOfEntrance": "2022-03-24T14:09:25.446Z",
       "id": 6
+    },
+    {
+      "vehiclePlate": "IUZ381",
+      "vehicleType": "Car",
+      "dateOfEntrance": "2022-03-24T14:10:53.525Z",
+      "id": 7
+    },
+    {
+      "vehiclePlate": "ITE789",
+      "vehicleType": "Car",
+      "dateOfEntrance": "2022-03-24T14:11:23.789Z",
+      "id": 8
     }
   ]
 }
