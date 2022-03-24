@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import vehiclesApi from "~/api/vehiclesApi";
-import { VehiclesResponse } from './interfaces';
+import { VehiclesResponse, FormValues } from './interfaces';
 export interface Vehicle {
   id:number
   vehicleType:string
@@ -33,9 +33,12 @@ const useVehicleStore = defineStore('vehicles',{
         console.log(error)
       }
     },
-    async addNewVehicle(){
+    async addNewVehicle(vehicle:FormValues){
+      const {vehicleType,vehiclePlate} = vehicle
       try {
-        const {data} = await vehiclesApi.post<VehiclesResponse>('/parkedVehicles')
+        const vehicleToSave = {vehiclePlate,vehicleType,dateOfEntrance:new Date().toISOString()}
+        const {data} = await vehiclesApi.post<VehiclesResponse>('/parkedVehicles',vehicleToSave)
+        this.allVehicles = [data, ...this.allVehicles]
       } catch (error) {
         console.log(error)
       }

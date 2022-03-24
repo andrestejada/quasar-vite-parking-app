@@ -14,7 +14,7 @@
         label="Type Of vehicle"
         lazy-rules
         :rules="[(val) => (val && val.length > 0) || 'field required']"
-        v-model="formValues.typeOfVehicle"
+        v-model="formValues.vehicleType"
       />
       <q-input
         class="col-5"
@@ -26,7 +26,7 @@
           (val) => (val && val.length > 0) || 'field requiered',
           isValitePlate,
         ]"
-        v-model="formValues.plate"
+        v-model="formValues.vehiclePlate"
       />
     </div>
     <div class="row justify-center">
@@ -43,29 +43,29 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
 import { isValitePlate } from '../utils/isvalidPlate';
+import useVehicleStore from '../stores/vehiclesStore';
+import { FormValues } from '../stores/interfaces';
 
-interface FormValues {
-  plate:string;
-  typeOfVehicle:string;
-}
+const store = useVehicleStore();
 const formValues = ref<FormValues>({
-  plate: "",
-  typeOfVehicle: "",
+  vehiclePlate: "",
+  vehicleType: "",
 });
 
-watch(()=>formValues.value.plate,(val)=>{
-  formValues.value.plate = val.toUpperCase()
+watch(()=>formValues.value.vehiclePlate,(val)=>{
+  formValues.value.vehiclePlate = val.toUpperCase()
 })
 
 const form = ref<HTMLFormElement|null>(null)
 
 const onSubmit=()=>{
+  store.addNewVehicle(formValues.value)
   form.value?.reset()
 }
 
 const onReset=()=>{
-  formValues.value.plate=''
-  formValues.value.typeOfVehicle=''
+  formValues.value.vehiclePlate=''
+  formValues.value.vehicleType=''
 }
 
 

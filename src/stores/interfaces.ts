@@ -5,3 +5,9 @@ export interface VehiclesResponse {
   dateOfEntrance: Date;
   id:             number;
 }
+
+
+export interface FormValues {
+  vehiclePlate:string;
+  vehicleType:string;
+}
