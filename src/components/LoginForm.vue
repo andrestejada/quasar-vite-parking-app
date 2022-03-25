@@ -4,6 +4,7 @@
       <q-separator color="secondary" size="3px" class="q-mb-lg" />  
       <q-form
         class="q-gutter-md q-mt-sm"
+        @submit="onSubmit"
       > 
       <q-input
         v-model="loginValues.email"      
@@ -43,6 +44,10 @@ const loginValues = ref({
   email:'',
   password:''
 })
+
+const onSubmit =()=>{
+  console.log('pass validation')
+}
 </script>
 
 <style lang="scss" scoped>
