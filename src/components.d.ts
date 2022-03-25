@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    LoginForm: typeof import('./components/LoginForm.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     ParkingForm: typeof import('./components/ParkingForm.vue')['default']
     PaymentDialog: typeof import('./components/PaymentDialog.vue')['default']
